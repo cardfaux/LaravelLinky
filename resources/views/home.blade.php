@@ -1185,18 +1185,19 @@
           <span class="block">Make Your Long Link&nbsp;</span>
           <span class="relative inline-block mt-3 text-white">A Short Link</span>
         </h1>
-        <div data-rounded="rounded-full"
+        <form action="/" method="POST" data-rounded="rounded-full"
           class="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
+          @csrf
           <input type="text" name="email" placeholder="url"
             class="w-full h-12 px-6 py-2 font-medium text-indigo-800 focus:outline-none" data-primary="indigo-800" />
           <span class="relative top-0 right-0 block">
-            <button type="button"
+            <button type="submit"
               class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-400 border border-transparent hover:bg-indigo-700 focus:outline-none active:bg-indigo-700"
               data-primary="indigo-600">
               generate
             </button>
           </span>
-        </div>
+        </form>
         <div class="mt-8 text-sm text-indigo-300" data-primary="indigo-600">
           By signing up, you agree to our terms and services.
         </div>

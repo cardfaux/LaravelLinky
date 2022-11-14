@@ -1182,8 +1182,8 @@
       <div class="container py-32 mx-auto text-center sm:px-4">
         <h1
           class="text-4xl font-extrabold leading-10 tracking-tight text-white sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl">
-          <span class="block">Make Your Long Link&nbsp;</span>
-          <span class="relative inline-block mt-3 text-white">A Short Link</span>
+          <span class="block">Thank You!!!!</span>
+          <span class="relative inline-block mt-3 text-white">Your Short Link</span>
         </h1>
         <form action="/" method="POST" data-rounded="rounded-full"
           class="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">

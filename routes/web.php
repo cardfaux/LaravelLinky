@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-  return view('home');
-});
-
-Route::post('/', function () {
-  return "Saved Data!!!";
-});
+Route::get('/', [LinkController::class, 'index']);
+Route::post('/', [LinkController::class, 'store']);
+Route::get('/show/{short_url}', [LinkController::class, 'show']);
+Route::get('/{short_url}', [LinkController::class, 'redirect']);

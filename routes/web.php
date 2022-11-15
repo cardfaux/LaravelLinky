@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,7 @@ Route::get('/', [LinkController::class, 'index']);
 Route::post('/', [LinkController::class, 'store']);
 Route::get('/show/{short_url}', [LinkController::class, 'show']);
 Route::get('/{short_url}', [LinkController::class, 'redirect']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

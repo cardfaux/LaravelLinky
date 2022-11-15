@@ -1182,25 +1182,23 @@
       <div class="container py-32 mx-auto text-center sm:px-4">
         <h1
           class="text-4xl font-extrabold leading-10 tracking-tight text-white sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl">
-          <span class="block">Thank You!!!!</span>
-          <span class="relative inline-block mt-3 text-white">Your Short Link</span>
+          <span class="block">Your link has been created</span>
+          <span class="relative inline-block mt-3 text-white"></span>
         </h1>
         <form action="/" method="POST" data-rounded="rounded-full"
-          class="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
+          class="relative flex flex-col items-center max-w-md mx-auto mt-12 overflow-hidden text-center">
           @csrf
-          <input type="text" name="original_url" placeholder="url"
-            class="w-full h-12 px-6 py-2 font-medium text-indigo-800 focus:outline-none" data-primary="indigo-800" />
+          <div class="text-sm mb-10 text-indigo-300" data-primary="indigo-600">
+            Right Click To Copy Link
+          </div>
           <span class="relative top-0 right-0 block">
-            <button type="submit"
-              class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-400 border border-transparent hover:bg-indigo-700 focus:outline-none active:bg-indigo-700"
+            <a href="http://localhost:8000/{{$short_url}}" type="submit"
+              class="inline-flex items-center w-full h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-400 border border-transparent hover:bg-indigo-700 focus:outline-none active:bg-indigo-700"
               data-primary="indigo-600">
-              generate
-            </button>
+              http://localhost:8000/{{$short_url}}
+            </a>
           </span>
         </form>
-        <div class="mt-8 text-sm text-indigo-300" data-primary="indigo-600">
-          By signing up, you agree to our terms and services.
-        </div>
       </div>
     </div>
   </section>

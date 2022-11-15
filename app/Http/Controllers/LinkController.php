@@ -57,9 +57,17 @@ class LinkController extends Controller
    * @param  \App\Models\Link  $link
    * @return \Illuminate\Http\Response
    */
-  public function show(Link $link)
+  public function show($short_url)
   {
-    return view('show');
+    $link = Link::where('short_url', $short_url)->firstOrFail();
+    return view('show', ["short_url" => $short_url]);
+  }
+
+  public function redirect($short_url)
+  {
+    $link = Link::where('short_url', $short_url)->firstOrFail();
+    //return $link->original_url;
+    return redirect($link->original_url);
   }
 
   /**

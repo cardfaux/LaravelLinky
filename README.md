@@ -64,3 +64,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+### Adding the adding_auth branch
+
+## The commands I ran during the process
+
+- `git branch -c adding_auth`
+- `git checkout adding_auth`
+- `git status`
+
+## to push the commits for this specific branch after running `git checkout heroku_branch`
+
+- `git add .`
+- `git commit -m add_the_comment_here`
+- `git push origin HEAD`
+  - which I believe pushes the commit to the branch that is checkedout without having specify it
